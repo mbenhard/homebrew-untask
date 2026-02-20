@@ -13,5 +13,8 @@ cask "untask" do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/Untask.app"],
                    sudo: false
+    system_command "/usr/bin/codesign",
+                   args: ["--force", "--deep", "--sign", "-", "#{appdir}/Untask.app"],
+                   sudo: false
   end
 end
