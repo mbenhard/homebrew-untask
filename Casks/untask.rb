@@ -1,6 +1,6 @@
 cask "untask" do
-  version "0.1.9"
-  sha256 "bf36df302d80b4e5bc564f0814bfe8dc3497bf03a4d7c6e803b3ff846d6c264a"
+  version "0.1.10"
+  sha256 "18dbe5aa040c5f1df63c21467d75ba20ce018ef0a00979c5549c77111edfaa36"
 
   url "https://github.com/mbenhard/untask/releases/download/v#{version}/Untask-darwin-arm64-#{version}.zip"
   name "Untask"
@@ -12,9 +12,6 @@ cask "untask" do
   postflight do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/Untask.app"],
-                   sudo: false
-    system_command "/usr/bin/codesign",
-                   args: ["--force", "--deep", "--sign", "-", "#{appdir}/Untask.app"],
                    sudo: false
   end
 end
