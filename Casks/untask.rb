@@ -1,6 +1,6 @@
 cask "untask" do
-  version "0.1.15"
-  sha256 "2d93cf56fd4a33969b7a95b27c2c221b4e33997ca93bea321ad3893331038af4"
+  version "0.1.16"
+  sha256 "3cbf00fe45dc0edf2874e1cdaf1cc03e98b35618f7602f8c8bdf1b568030ceb9"
 
   url "https://github.com/mbenhard/untask/releases/download/v#{version}/Untask-darwin-arm64-#{version}.zip"
   name "Untask"
